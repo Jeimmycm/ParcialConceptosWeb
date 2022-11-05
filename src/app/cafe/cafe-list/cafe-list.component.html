@@ -1,0 +1,33 @@
+
+<div style="width: 78%;"  class="container-fluid pt-5">
+<div class="title">
+  <img src="https://i.ibb.co/D4qr5jd/El-aroma-ma-gico.png" alt="El-aroma-ma-gico">
+</div>
+<hr>
+<img src="https://i.ibb.co/442C6dF/image-1.jpg" alt="Imagen1">
+<hr>
+  <div class="container-fluid2 align-items-center p-3 "></div>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <table class="col-3 table table-striped">
+    <thead style="background-color:#333A40">
+      <tr>
+        <th><p class="header">#</p></th>
+        <th><p class="header"> Nombre</p></th>
+        <th><p class="header">Tipo</p></th>
+        <th><p class="header">Región</p></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let cafe of cafes">
+      <tr>
+          <td><p class="idCafe">{{cafe.id }}</p></td>
+          <td><p>{{cafe.nombre }}</p></td>
+          <td><p>{{cafe.tipo }}</p></td>
+          <td><p>{{cafe.region }}</p></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="footer">Contact us: +57 3102105253 - info@elaromamagico.com - @elaromamagico</p>
