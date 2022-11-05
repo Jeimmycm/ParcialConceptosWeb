@@ -14,19 +14,19 @@
   <table class="col-3 table table-striped">
     <thead style="background-color:#333A40">
       <tr>
-        <th><p class="header">#</p></th>
-        <th><p class="header"> Nombre</p></th>
-        <th><p class="header">Tipo</p></th>
-        <th><p class="header">Región</p></th>
+        <th><p class="header" id="headerId">#</p></th>
+        <th><p class="header" id="headerNombre">Nombre</p></th>
+        <th><p class="header" id="headerTipo">Tipo</p></th>
+        <th><p class="header" id="headerRegion">Región</p></th>
       </tr>
     </thead>
     <tbody *ngFor="let cafe of cafes">
       <div *ngIf="calculateCafe(cafe)"></div>
       <tr>
           <td><p class="idCafe">{{cafe.id }}</p></td>
-          <td><p>{{cafe.nombre }}</p></td>
-          <td><p>{{cafe.tipo }}</p></td>
-          <td><p>{{cafe.region }}</p></td>
+          <td><p class="nombreCafe">{{cafe.nombre }}</p></td>
+          <td><p class="tipoCafe">{{cafe.tipo }}</p></td>
+          <td><p class="regionCafe">{{cafe.region }}</p></td>
       </tr>
     </tbody>
   </table>
