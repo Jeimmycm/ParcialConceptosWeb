@@ -1,7 +1,7 @@
 
 <div style="width: 78%;"  class="container-fluid pt-5">
 <div class="title">
-  <img src="https://i.ibb.co/D4qr5jd/El-aroma-ma-gico.png" alt="El-aroma-ma-gico">
+  <img src="https://i.ibb.co/D4qr5jd/El-aroma-ma-gico.png" alt="El-aroma-magico">
 </div>
 <hr>
 <img src="https://i.ibb.co/442C6dF/image-1.jpg" alt="Imagen1">
@@ -21,6 +21,7 @@
       </tr>
     </thead>
     <tbody *ngFor="let cafe of cafes">
+      <div *ngIf="calculateCafe(cafe)"></div>
       <tr>
           <td><p class="idCafe">{{cafe.id }}</p></td>
           <td><p>{{cafe.nombre }}</p></td>
@@ -29,5 +30,7 @@
       </tr>
     </tbody>
   </table>
+  <p class="calculo">Total café de origen: {{contadorOrigen}}</p>
+  <p class="calculo">Total café de blend: {{contadorBlend}} </p>
 
   <p class="footer">Contact us: +57 3102105253 - info@elaromamagico.com - @elaromamagico</p>

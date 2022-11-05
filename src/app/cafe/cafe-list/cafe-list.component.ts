@@ -8,7 +8,10 @@ import { CafeService } from '../cafe.service';
   styleUrls: ['./cafe-list.component.css']
 })
 export class CafeListComponent implements OnInit {
-  cafes: Array<Cafe> = []
+  cafes: Array<Cafe> = [];
+  contadorOrigen: number =0;
+  contadorBlend: number =0;
+
 
   constructor(private cafeService: CafeService) { }
 
@@ -18,6 +21,18 @@ export class CafeListComponent implements OnInit {
 
     });
   }
+
+  calculateCafe(cafe: Cafe):void {
+      if(cafe.tipo=="Café de Origen"){
+
+        this.contadorOrigen=1+this.contadorOrigen;
+      }
+      else if(cafe.tipo=="Blend"){
+        this.contadorBlend=1+this.contadorBlend;
+      }
+  }
+
+
   ngOnInit(): void {
     this.getCafes();
   }
